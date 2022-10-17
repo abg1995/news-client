@@ -20,7 +20,7 @@ function Archived(props) {
         </Card>
       );
     });
-    return solution;
+    return solution.sort().reverse();
   };
 
   
