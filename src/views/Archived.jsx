@@ -23,6 +23,7 @@ function Archived(props) {
     return solution;
   };
 
+  
   return (
     <>
       <h1>Archived news</h1>
