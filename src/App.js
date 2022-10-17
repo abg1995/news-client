@@ -6,6 +6,8 @@ import CreateNews from './views/CreateNews.jsx'
 import { useState, useEffect} from 'react';
 import axios from "axios";
 import Navegador from "./components/Navbar"
+import NewsDetail from './views/NewsDetail';
+import ArchivedDetails from './views/ArchivedDetails';
 
 function App() {
 
@@ -23,6 +25,7 @@ const getNews = () => {
   axios.get('http://localhost:5005/api/news')
     .then((response) => {
       setNews(response.data);
+    
     })
     .catch((e) => console.log("error getting News from api", e));
 };
@@ -32,7 +35,8 @@ const getArchived = () => {
 
   axios.get('http://localhost:5005/api/archived')
     .then((response) => {
-      setArchived(response.data);
+      setArchived(response.data)
+      console.log(response.data)
     })
     .catch((e) => console.log("error getting Archived news from api",e))
 }
@@ -43,12 +47,12 @@ const getArchived = () => {
    <Navegador />
    <h1>Welcome to the NEWS site</h1>
 
-{/* place buttons, cards, or other elements to go to news, archived, and create news post, create navigation bar??? */}
-
 
    <Routes>
      <Route path='/news' element={<News getNews={getNews} news={ news }/>} />
-     <Route path='/archived' element={<Archived archvied={ archived } getArchived = {getArchived}/>} />
+     <Route path='/news/:newsId' element={<NewsDetail getNews={getNews} news={ news }/>} />
+     <Route path='/archived' element={<Archived archived={ archived } getArchived = {getArchived}/>} />
+     <Route path='/archived/:archivedId' element={<ArchivedDetails archived={ archived } getArchived = {getArchived}/>} />
      <Route path='/news/post' element={<CreateNews getNews = { getNews }/>} />  
      {/* revisar ruta para crear posts news */}
 
