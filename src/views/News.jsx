@@ -20,7 +20,6 @@ function News(props) {
         </Card>
       );
     });
-    console.log("esto es RESULT",result)
     return result.sort().reverse();
   };
 

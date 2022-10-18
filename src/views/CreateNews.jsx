@@ -19,7 +19,6 @@ function CreateNews(props) {
     axios
       .post("http://localhost:5005/api/news/post", inputs)
       .then((response) => {
-        console.log(response);
         props.getNews();
         navigate("/news");
       })
@@ -35,7 +34,7 @@ function CreateNews(props) {
       <br />
       <br />
       <section>
-        <form onSubmit={createNews}>
+        <form onSubmit={()  => createNews}>
             <br />
           <div>
             <label >
