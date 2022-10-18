@@ -12,8 +12,8 @@ function News(props) {
           <Card.Img variant="top" src={element?.image} />
           <Card.Body>
             <Card.Title>{element?.title}</Card.Title>
-            <Card.Subtitle> {element?.date}</Card.Subtitle>
-            <NavLink href={`/news/${element?._id}`} >
+            <Card.Subtitle> {element?.date}</Card.Subtitle><br />
+            <NavLink className="links" href={`/news/${element?._id}`} >
               Mas info
             </NavLink>
           </Card.Body>
@@ -26,7 +26,7 @@ function News(props) {
 
   return (
     <>
-      <h1>the news</h1>
+      <h2 className="titles">Noticias mas recientes</h2>
 
       <br />
       <br />

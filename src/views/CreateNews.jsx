@@ -30,7 +30,7 @@ function CreateNews(props) {
 
   return (
     <>
-      <h1>here we introduce news</h1>
+      <h1 className="titles">Crea o escribe un articulo</h1>
       <br />
       <br />
       <section>

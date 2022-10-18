@@ -1,6 +1,27 @@
 .news-card{
-
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+
+.titles{
+    color: rgb(189, 76, 23);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.links{
+    color: blue;
+}
+
+#texto-inicial{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 10rem;
+    margin-left: 10em;
+}
+
+.parrafo-inicial{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }

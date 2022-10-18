@@ -12,8 +12,8 @@ function Archived(props) {
           <Card.Img variant="top" src={element?.image} />
           <Card.Body>
             <Card.Title>{element?.title}</Card.Title>
-            <Card.Subtitle> {element?.date}</Card.Subtitle>
-            <NavLink variant="primary" href={`/archived/${element?._id}`}>
+            <Card.Subtitle> {element?.date}</Card.Subtitle><br />
+            <NavLink className="links" variant="secondary" href={`/archived/${element?._id}`}>
               Mas info
             </NavLink>
           </Card.Body>
@@ -26,7 +26,7 @@ function Archived(props) {
   
   return (
     <>
-      <h1>Archived news</h1>
+      <h2 className="titles">Archived news</h2>
 
       <section className="news-card">
         <br />
