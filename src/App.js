@@ -8,6 +8,7 @@ import axios from "axios";
 import Navegador from "./components/Navbar"
 import NewsDetail from './views/NewsDetail';
 import ArchivedDetails from './views/ArchivedDetails';
+import HomePage from './views/Homepage';
 
 function App() {
 
@@ -45,10 +46,10 @@ const getArchived = () => {
     <div className="App">
    
    <Navegador />
-   <h1>Welcome to the NEWS site</h1>
 
 
    <Routes>
+     <Route path='/' element={<HomePage />} />
      <Route path='/news' element={<News getNews={getNews} news={ news }/>} />
      <Route path='/news/:newsId' element={<NewsDetail getNews={getNews} news={ news }/>} />
      <Route path='/archived' element={<Archived archived={ archived } getArchived = {getArchived}/>} />
