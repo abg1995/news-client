@@ -30,13 +30,15 @@ function CreateNews(props) {
 
   return (
     <>
+    <br />
       <h1 className="titles">Crea o escribe un articulo</h1>
       <br />
       <br />
       <section>
         <form onSubmit={createNews}>
+            <br />
           <div>
-            <label>
+            <label >
               Titulo: &nbsp;&nbsp;&nbsp;
               <input
                 type="text"
@@ -54,7 +56,7 @@ function CreateNews(props) {
 
           <div>
             <label>
-              texto: &nbsp;&nbsp;&nbsp;
+              Texto: &nbsp;&nbsp;&nbsp;
               <textarea
                 rows="4"
                 cols="50"
@@ -72,7 +74,7 @@ function CreateNews(props) {
 
           <div>
             <label>
-              link imagen: &nbsp;&nbsp;&nbsp;
+              Link imagen: &nbsp;&nbsp;&nbsp;
               <input
                 type="text"
                 name="image"
@@ -85,11 +87,10 @@ function CreateNews(props) {
             </label>
           </div>
           <br />
-          <br />
 
           <div>
             <label>
-              fecha: &nbsp;&nbsp;&nbsp;
+              Fecha: &nbsp;&nbsp;&nbsp;
               <input
                 type="date"
                 name="date"
